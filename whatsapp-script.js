@@ -1,6 +1,6 @@
 // Configuración de WhatsApp - Guardar número en localStorage
 const WHATSAPP_STORAGE_KEY = 'tiendaropa_whatsapp_number';
-const DEFAULT_WHATSAPP = '+573001234567'; // Cambia esto con tu número
+const DEFAULT_WHATSAPP = '+51921161931'; // Número de Perú configurado
 
 // DOM Elements
 const orderForm = document.getElementById('order-form');
@@ -55,7 +55,7 @@ function saveWhatsappNumber() {
     }
 
     if (!isValidWhatsappNumber(number)) {
-        alert('Formato inválido. Usa: +[código][número]\nEjemplo: +573001234567');
+        alert('Formato inválido. Usa: +[código][número]\nEjemplo: +51921161931');
         return;
     }
 
@@ -139,7 +139,7 @@ function validateFormData(data) {
     }
 
     if (!data.phone || !isValidPhone(data.phone)) {
-        alert('❌ Número de teléfono inválido. Usa formato: +573001234567');
+        alert('❌ Número de teléfono inválido. Usa formato: +51921161931');
         return false;
     }
 
@@ -256,3 +256,4 @@ whatsappNumberInput.addEventListener('input', (e) => {
 
 console.log('✅ Sistema de pedidos por WhatsApp cargado correctamente');
 console.log(`📞 Número actual: ${displayPhoneBtn.textContent}`);
+console.log('🇵🇪 País: Perú');
